@@ -1,0 +1,190 @@
+#uni-debug-toolbar {
+    padding: 0;
+    font: 11px Verdana, Arial, sans-serif;
+    text-align: left;
+    min-height: 40px;
+    overflow: auto;
+    background: rgb(246, 88, 11);
+    background: rgb(246, 88, 11) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAAAAAAa3c+rAAAAGUlEQVRYw2N8y8TAxIiEkUmEGCoflzogBgBYWwFNHCeQAAAAAABJRU5ErkJggg==); /* generated using "cat assets/bg.png | base64" */
+    background: -moz-linear-gradient(top,  rgba(246, 88, 11,1) 0%, rgb(246, 114, 42) 53%, rgb(255, 57, 4) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246, 88, 11,1)), color-stop(53%,rgba(246, 114, 42,1)), color-stop(100%,rgba(255, 57, 4,1)));
+    background: -webkit-linear-gradient(top,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    background: -o-linear-gradient(top,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    background: linear-gradient(to bottom,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 );
+
+    /* ensure debug toolbar text is displayed ltr even on rtl pages */
+    direction: ltr;
+}
+
+.uni-debug-toolbar-top {
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.uni-debug-toolbar-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 1000000;
+    border-top: 1px solid #ccc;
+}
+
+.uni-debug-toolbar-block {
+    float: left;
+    margin: 0;
+    border-right: 1px solid #e4e4e4;
+    padding: 4px 8px;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+.uni-debug-toolbar-block a {
+    text-decoration: none;
+    color: black;
+}
+
+.uni-debug-toolbar-block span {
+}
+
+.uni-debug-toolbar-block img {
+    vertical-align: middle;
+}
+
+#uni-debug-toolbar .label {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 11.844px;
+    font-weight: normal;
+    line-height: 14px;
+    color: #FA5315;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #ffffff;
+}
+
+#uni-debug-toolbar .label {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#uni-debug-toolbar .label:empty {
+    display: none;
+}
+
+#uni-debug-toolbar a.label:hover,
+#uni-debug-toolbar a.label:focus {
+    color: #FA5315;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#uni-debug-toolbar .label-important {
+    background-color: #b94a48;
+}
+
+#uni-debug-toolbar .label-important[href] {
+    background-color: #953b39;
+}
+
+#uni-debug-toolbar .label-warning,
+#uni-debug-toolbar .badge-warning {
+    background-color: #f89406;
+}
+
+#uni-debug-toolbar .label-warning[href] {
+    background-color: #c67605;
+}
+
+#uni-debug-toolbar .label-success {
+    background-color: #468847;
+}
+
+#uni-debug-toolbar .label-success[href] {
+    background-color: #356635;
+}
+
+#uni-debug-toolbar .label-info {
+    background-color: #3a87ad;
+}
+
+#uni-debug-toolbar .label-info[href] {
+    background-color: #2d6987;
+}
+
+#uni-debug-toolbar .label-inverse,
+#uni-debug-toolbar .badge-inverse {
+    background-color: #333333;
+}
+
+#uni-debug-toolbar .label-inverse[href],
+#uni-debug-toolbar .badge-inverse[href] {
+    background-color: #1a1a1a;
+}
+
+.uni-debug-toolbar-toggler {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    width: 15px;
+    height: 30px;
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 28px;
+    color: #FA5315;
+    text-align: center;
+    background: #ffffff;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.uni-debug-toolbar-toggler:hover,
+.uni-debug-toolbar-toggler:focus {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+#uni-debug-toolbar-min {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1000000;
+    font: 11px Verdana, Arial, sans-serif;
+    text-align: left;
+    width: 63px;
+    height: 38px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -webkit-border-top-left-radius: 6px;
+    -moz-border-top-left-radius: 6px;
+    border-top-left-radius: 6px;
+    background: rgb(246, 88, 11);
+    background: rgb(246, 88, 11) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAAAAAAa3c+rAAAAGUlEQVRYw2N8y8TAxIiEkUmEGCoflzogBgBYWwFNHCeQAAAAAABJRU5ErkJggg==); /* generated using "cat assets/bg.png | base64" */
+    background: -moz-linear-gradient(top,  rgba(246, 88, 11,1) 0%, rgb(246, 114, 42) 53%, rgb(255, 57, 4) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246, 88, 11,1)), color-stop(53%,rgba(246, 114, 42,1)), color-stop(100%,rgba(255, 57, 4,1)));
+    background: -webkit-linear-gradient(top,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    background: -o-linear-gradient(top,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    background: linear-gradient(to bottom,  rgba(246, 88, 11,1) 0%,rgba(246, 114, 42,1) 53%,rgba(255, 57, 4,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 );
+}
+
+#uni-debug-toolbar-logo {
+    position: fixed;
+    right: 31px;
+    bottom: 4px;
+}
