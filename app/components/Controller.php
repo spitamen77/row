@@ -18,7 +18,7 @@ use uni\web\View;
 
 abstract  class Controller extends \uni\web\Controller
 {
-    public $layout="/core";
+//    public $layout="/core";
     public $error="/error";
     public $cm="home";
     public $historyLabel="Your history";
@@ -29,42 +29,42 @@ abstract  class Controller extends \uni\web\Controller
     public $top=false;
     public $body_class="";
     public $private=true;
-    public function behaviors()
-    {
-        if($this->private){
-            return [
-                'access' => [
-                    'class' => AccessControl::className(),
-
-                    'rules' => [
-                        [
-                            'allow' => true,
-                            'roles' => ['@'],
-                        ],
-                        [
-                            'allow' => true,
-                            'actions' => ['login'],
-                            'roles' => ['?'],
-                        ],
-                        [
-                            'allow' => true,
-                            'actions' => ['logout'],
-                            'roles' => ['@'],
-                        ],
-                    ],
-                ],
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-//                    'logout' => ['post'],
-                    ],
-                ],
-            ];
-        }else{
-            return [];
-        }
-
-    }
+//    public function behaviors()
+//    {
+//        if($this->private){
+//            return [
+//                'access' => [
+//                    'class' => AccessControl::className(),
+//
+//                    'rules' => [
+//                        [
+//                            'allow' => true,
+//                            'roles' => ['@'],
+//                        ],
+//                        [
+//                            'allow' => true,
+//                            'actions' => ['login'],
+//                            'roles' => ['?'],
+//                        ],
+//                        [
+//                            'allow' => true,
+//                            'actions' => ['logout'],
+//                            'roles' => ['@'],
+//                        ],
+//                    ],
+//                ],
+//                'verbs' => [
+//                    'class' => VerbFilter::className(),
+//                    'actions' => [
+////                    'logout' => ['post'],
+//                    ],
+//                ],
+//            ];
+//        }else{
+//            return [];
+//        }
+//
+//    }
 
     public function flash($type, $message)
     {
@@ -95,13 +95,13 @@ abstract  class Controller extends \uni\web\Controller
         ];
     }
     public function beforeAction($action){
-        if (isset($_GET['notific'])){
-            $model = Notification::find()->where(['status'=>1, 'id'=>$_GET['notific']])->one();
-            if ($model){
-                $model->status = 0;
-                $model->save(false);
-            }
-        }
+//        if (isset($_GET['notific'])){
+//            $model = Notification::find()->where(['status'=>1, 'id'=>$_GET['notific']])->one();
+//            if ($model){
+//                $model->status = 0;
+//                $model->save(false);
+//            }
+//        }
         Uni::$app->view->on(View::EVENT_BEGIN_BODY, function () {
             $this->fillBreadcrumbs();
         });

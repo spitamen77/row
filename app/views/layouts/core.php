@@ -4,8 +4,8 @@
 use \uni\helpers\Html;
 use app\components\manager\Url;
 
-$user=Uni::$app->getUser()->getIdentity();
-if (!$user) return Uni::$app->getResponse()->redirect(Url::to('/users/auth/login'), 302);
+//$user=Uni::$app->getUser()->getIdentity();
+//if (!$user) return Uni::$app->getResponse()->redirect(Url::to('/users/auth/login'), 302);
 $block=Uni::$app->controller->block;
 $top=Uni::$app->controller->top;
 $bc=Uni::$app->controller->body_class;

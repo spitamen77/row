@@ -24,7 +24,7 @@ $config = [
             'enableStrictParsing' => false,
             'class'=>'app\components\manager\LangUrlManager',
             'rules' => [
-                'http://<subdomain>.simplex.uz' => 'users/default/dashboard',
+                'http://<subdomain>.websar.uz' => 'users/default/dashboard',
                 '<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/<_a>',
                 '<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>/<item:\w+>/<id:\d+>' => '<_m>/<_c>/<_a>',
                 '<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>/<item:\d+>/<id:\d+>' => '<_m>/<_c>/<_a>',
@@ -87,8 +87,8 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => 'bitsimplex.net@gmail.com',
-                'password' => 'b1t$!mplex',
+                'username' => 'ax5165@gmail.com',
+                'password' => 'mahalla1',
                 'port' => '587',
                 'encryption' => 'tls',
             ],
@@ -113,11 +113,11 @@ $config = [
         'reference' => [
             'class' => 'app\modules\reference\Reference',
         ],
-        'litsenziya' => [
-            'class' => 'app\modules\litsenziya\Litsenziya',
+        'admin' => [
+            'class' => 'app\modules\admin\Admin',
         ],
-        'settings' => [
-            'class' => 'app\modules\settings\Settings',
+        'site' => [
+            'class' => 'app\modules\site\Site',
         ],
         'api' => [
             'class' => 'app\modules\api\API',
@@ -125,51 +125,20 @@ $config = [
         'hr' => [
             'class' => 'app\modules\hr\HR',
         ],
-        'gridview'=>[
-            'class' => '\kartik\grid\Module',
-        ],
-        'arrival'=>[
-            'class' => 'app\modules\arrival\Arrival',
-        ],
-        'handbook' => [
-            'class' => 'app\modules\handbook\Handbook',
-        ],
         'cpanel' => [
             'class' => 'app\modules\cpanel\CPanel',
         ],
         'reestr' => [
             'class' => 'app\modules\reestr\Reestr',
         ],
-        'preparat' => [
-            'class' => 'app\modules\preparat\Preparat',
-        ],
         'report' => [
             'class' => 'app\modules\report\Report',
         ],
-         'vaksinatsiya' => [
-             'class' => 'app\modules\vaksina\Vaksina',
-         ],
         'filemanager' => [
             'class' => 'app\modules\filemanager\Filemanager',
         ],
-        'video' => [
-
-            'class' => 'app\modules\video\Video',
-        ],
         'comment' => [
-
             'class' => 'app\modules\comment\CommentModule',
-
-        ],
-        'laboratory' => [
-
-            'class' => 'app\modules\laboratory\Laboratory',
-
-        ],
-        'diagnose' => [
-
-            'class' => 'app\modules\diagnose\Diagnose',
-
         ],
     ],
     'params' => $params,
